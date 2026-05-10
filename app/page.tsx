@@ -1,3 +1,8 @@
+'use client'
+
+import { useState } from 'react'
+import { AnimatePresence } from 'framer-motion'
+import AnnouncementBanner from '@/components/AnnouncementBanner'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
@@ -12,9 +17,16 @@ import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 
 export default function Home() {
+  const [showBanner, setShowBanner] = useState(true)
+
   return (
     <main>
-      <Navbar />
+      <AnimatePresence>
+        {showBanner && (
+          <AnnouncementBanner onDismiss={() => setShowBanner(false)} />
+        )}
+      </AnimatePresence>
+      <Navbar hasBanner={showBanner} />
       <Hero />
       <About />
       <Experience />

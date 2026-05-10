@@ -16,7 +16,7 @@ const NAV_ITEMS = [
   { label: 'Contact', id: 'contact' },
 ]
 
-export default function Navbar() {
+export default function Navbar({ hasBanner = false }: { hasBanner?: boolean }) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const activeId = useScrollSpy(NAV_ITEMS.map((n) => n.id))
@@ -47,13 +47,13 @@ export default function Navbar() {
 
       {/* Navbar */}
       <motion.nav
-        className={`fixed top-0 left-0 right-0 z-[1000] px-6 py-4 flex items-center justify-between transition-all duration-400 ${
+        className={`fixed left-0 right-0 z-[1000] px-6 py-4 flex items-center justify-between transition-colors duration-400 ${
           scrolled
             ? 'bg-black/75 backdrop-blur-2xl border-b border-white/[0.06] shadow-2xl'
             : 'bg-transparent'
         }`}
         initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        animate={{ y: 0, opacity: 1, top: hasBanner ? 44 : 0 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       >
         <button
