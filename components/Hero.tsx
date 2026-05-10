@@ -38,15 +38,16 @@ export default function Hero() {
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
-    const ctx = canvas.getContext('2d')!
-    let raf: number
+    const cv: HTMLCanvasElement = canvas
+    const ctx = cv.getContext('2d')!
+    let raf = 0
     let W = 0
     let H = 0
     let pts: Particle[] = []
 
     function resize() {
-      W = canvas.width = window.innerWidth
-      H = canvas.height = window.innerHeight
+      W = cv.width = window.innerWidth
+      H = cv.height = window.innerHeight
       pts = initParticles(W, H)
     }
     resize()
