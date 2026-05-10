@@ -5,11 +5,11 @@ import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion'
 import { useScrollSpy } from '@/hooks/useScrollSpy'
 
 const NAV_ITEMS = [
+  { label: 'Ebook', id: 'ebook' },
   { label: 'About', id: 'about' },
   { label: 'Experience', id: 'experience' },
   { label: 'Work', id: 'work-showcase' },
   { label: 'Project', id: 'project' },
-  { label: 'Ebook', id: 'ebook' },
   { label: 'Skills', id: 'skills' },
   { label: 'Certs', id: 'certifications' },
   { label: 'Education', id: 'education' },
@@ -127,7 +127,8 @@ export default function Navbar({ hasBanner = false }: { hasBanner?: boolean }) {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="fixed top-[64px] left-0 right-0 z-[999] bg-black/95 backdrop-blur-2xl border-b border-white/[0.06] px-4 py-3 md:hidden"
+            className="fixed left-0 right-0 z-[999] bg-black/95 backdrop-blur-2xl border-b border-white/[0.06] px-4 py-3 md:hidden"
+            style={{ top: hasBanner ? 108 : 64 }}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}

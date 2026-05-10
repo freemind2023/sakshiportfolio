@@ -28,11 +28,11 @@ export default function Home() {
       </AnimatePresence>
       <Navbar hasBanner={showBanner} />
       <Hero />
+      <Ebook />
       <About />
       <Experience />
       <WorkShowcase />
       <Project />
-      <Ebook />
       <Skills />
       <Certifications />
       <Education />
