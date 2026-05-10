@@ -42,23 +42,6 @@ export default function AnnouncementBanner({ onDismiss }: Props) {
 
       {/* Content */}
       <div className="relative z-10 flex items-center gap-2.5 text-white pr-8">
-        {/* Pulsing stars */}
-        <motion.span
-          className="text-base hidden sm:block"
-          animate={{ scale: [1, 1.3, 1], rotate: [0, 15, -15, 0] }}
-          transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
-        >
-          ✨
-        </motion.span>
-
-        <motion.span
-          className="text-base"
-          animate={{ scale: [1, 1.25, 1] }}
-          transition={{ repeat: Infinity, duration: 1.4, ease: 'easeInOut' }}
-        >
-          📚
-        </motion.span>
-
         <span className="font-bold text-[0.78rem] sm:text-sm tracking-wide">
           <span className="hidden sm:inline text-amber-100 font-medium mr-1">
             Proud to announce —
@@ -76,14 +59,6 @@ export default function AnnouncementBanner({ onDismiss }: Props) {
         >
           Read Free →
         </a>
-
-        <motion.span
-          className="text-sm hidden sm:block"
-          animate={{ scale: [1, 1.3, 1], rotate: [0, -15, 15, 0] }}
-          transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut', delay: 0.4 }}
-        >
-          ✨
-        </motion.span>
       </div>
 
       {/* Dismiss */}

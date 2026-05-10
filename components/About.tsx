@@ -96,13 +96,13 @@ export default function About() {
             <div
               className="border-l-[3px] border-teal-500 pl-4 py-2 bg-teal-500/[0.07] rounded-r-xl mb-5 text-teal-300 text-[0.92rem] italic font-medium"
             >
-              🎯 Goal: Grow into a strategic leadership role where AI fluency, creative thinking, and
+              Goal: Grow into a strategic leadership role where AI fluency, creative thinking, and
               business operations intersect to drive measurable growth.
             </div>
 
             <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">Languages</p>
             <div className="flex gap-2 flex-wrap">
-              {['🇮🇳 Marathi', '🇮🇳 Hindi', '🌐 English'].map((lang) => (
+              {['Marathi', 'Hindi', 'English'].map((lang) => (
                 <span
                   key={lang}
                   className="px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30 bg-blue-500/10 text-blue-300"

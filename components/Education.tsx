@@ -46,7 +46,6 @@ export default function Education() {
           transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           whileHover={{ y: -6, borderColor: 'rgba(59,130,246,0.3)', boxShadow: '0 20px 56px rgba(0,0,0,0.4)' }}
         >
-          <div className="text-5xl mb-4">🎓</div>
           <h3 className="text-xl font-black tracking-tight mb-1">
             Bachelor of Commerce (B.Com) — Pursuing
           </h3>

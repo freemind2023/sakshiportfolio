@@ -127,7 +127,7 @@ export default function Certifications() {
               <h3 className="font-bold text-[1rem] mb-1 leading-snug">{cert.name}</h3>
               <p className="text-purple-400 text-[0.82rem] font-semibold mb-1.5">{cert.org}</p>
               <p className="text-slate-400 text-[0.78rem] mb-0.5">
-                📅 {cert.date}{cert.expiry ? ` · Expires ${cert.expiry}` : ''}
+                {cert.date}{cert.expiry ? ` · Expires ${cert.expiry}` : ''}
               </p>
               <p className="text-white/25 font-mono text-[0.7rem] mb-4">
                 ID: {cert.id}

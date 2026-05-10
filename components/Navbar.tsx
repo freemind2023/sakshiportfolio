@@ -153,7 +153,7 @@ export default function Navbar({ hasBanner = false }: { hasBanner?: boolean }) {
                 className="btn-primary w-full justify-center mt-2"
                 onClick={() => setMenuOpen(false)}
               >
-                ⬇ Download Resume
+                Download Resume
               </a>
             </div>
           </motion.div>

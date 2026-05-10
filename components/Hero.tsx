@@ -173,7 +173,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.p variants={fadeUp} className="text-slate-400 text-sm mb-8 flex items-center justify-center gap-1.5">
-          📍 Pune, Maharashtra
+          Pune, Maharashtra
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex gap-3 justify-center flex-wrap mb-8">
@@ -183,7 +183,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="btn-primary"
           >
-            ⬇ Download Resume
+            Download Resume
           </a>
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}

@@ -18,15 +18,15 @@ const CORE_SKILLS = [
 
 const AI_TOOLS = [
   {
-    category: '🔍 Research & Discovery',
+    category: 'Research & Discovery',
     tools: ['Perplexity AI', 'Research Rabbit', 'Elicit AI', 'Consensus AI', 'Connected Papers', 'Scite Assistant'],
   },
   {
-    category: '📄 Document Analysis',
+    category: 'Document Analysis',
     tools: ['ChatPDF Reader', 'Humata AI', 'Scholarcy', 'Genei AI'],
   },
   {
-    category: '✍️ Content & Strategy',
+    category: 'Content & Strategy',
     tools: ['ChatGPT', 'Claude AI'],
   },
 ]

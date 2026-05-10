@@ -55,9 +55,8 @@ export default function Experience() {
           </h2>
         </motion.div>
 
-        {/* Timeline */}
         <div className="relative">
-          {/* Animated line */}
+          {/* Vertical line — desktop only */}
           <motion.div
             className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] hidden md:block origin-top"
             style={{ background: 'linear-gradient(to bottom, #7c3aed, #3b82f6, #14b8a6)' }}
@@ -67,31 +66,37 @@ export default function Experience() {
             transition={{ duration: 1.8, ease: 'easeInOut' }}
           />
 
-          <div className="flex flex-col gap-14">
-            {ENTRIES.map((entry, i) => {
-              const isLeft = i % 2 === 0
-              return (
-                <div key={entry.company} className="relative md:grid md:grid-cols-[1fr_56px_1fr] md:gap-0 flex flex-col">
-                  {/* Left side (desktop) */}
-                  {isLeft ? (
-                    <motion.div
-                      className="md:col-start-1 md:pr-8"
-                      initial={{ opacity: 0, x: -50 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true, amount: 0.2 }}
-                      transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                    >
-                      <TimelineCard entry={entry} />
-                    </motion.div>
-                  ) : (
-                    <div className="hidden md:block md:col-start-1" />
-                  )}
+          {ENTRIES.map((entry, i) => {
+            const isLeft = i % 2 === 0
+            return (
+              <div key={entry.company}>
+                {/* ── Desktop: alternating timeline grid ── */}
+                <div className="hidden md:grid md:grid-cols-[1fr_56px_1fr] mb-14">
+                  {/* Left slot */}
+                  <div className="pr-8">
+                    {isLeft && (
+                      <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+                      >
+                        <TimelineCard entry={entry} />
+                      </motion.div>
+                    )}
+                  </div>
 
-                  {/* Dot */}
-                  <div className="hidden md:flex md:col-start-2 items-start justify-center pt-7">
+                  {/* Centre dot */}
+                  <div className="flex items-start justify-center pt-7">
                     <motion.div
                       className="w-4 h-4 rounded-full border-[3px] border-[#0a0a0f] z-10"
-                      style={{ background: entry.color === 'purple' ? 'linear-gradient(135deg,#7c3aed,#3b82f6)' : 'linear-gradient(135deg,#14b8a6,#3b82f6)' }}
+                      style={{
+                        background:
+                          entry.color === 'purple'
+                            ? 'linear-gradient(135deg,#7c3aed,#3b82f6)'
+                            : 'linear-gradient(135deg,#14b8a6,#3b82f6)',
+                        boxShadow: '0 0 16px rgba(124,58,237,0.7)',
+                      }}
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true, amount: 0.5 }}
@@ -99,42 +104,41 @@ export default function Experience() {
                     />
                   </div>
 
-                  {/* Right side (desktop) */}
-                  {!isLeft ? (
-                    <motion.div
-                      className="md:col-start-3 md:pl-8"
-                      initial={{ opacity: 0, x: 50 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true, amount: 0.2 }}
-                      transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                    >
-                      <TimelineCard entry={entry} />
-                    </motion.div>
-                  ) : (
-                    <div className="hidden md:block md:col-start-3" />
-                  )}
-
-                  {/* Mobile: always show */}
-                  <motion.div
-                    className="md:hidden"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}
-                    transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                  >
-                    <TimelineCard entry={entry} />
-                  </motion.div>
+                  {/* Right slot */}
+                  <div className="pl-8">
+                    {!isLeft && (
+                      <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+                      >
+                        <TimelineCard entry={entry} />
+                      </motion.div>
+                    )}
+                  </div>
                 </div>
-              )
-            })}
-          </div>
+
+                {/* ── Mobile: simple stacked card ── */}
+                <motion.div
+                  className="md:hidden mb-6"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <TimelineCard entry={entry} />
+                </motion.div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>
   )
 }
 
-function TimelineCard({ entry }: { entry: typeof ENTRIES[0] }) {
+function TimelineCard({ entry }: { entry: (typeof ENTRIES)[0] }) {
   return (
     <motion.div
       className="bg-white/[0.025] border border-white/[0.07] rounded-2xl p-6 cursor-default"
@@ -151,7 +155,7 @@ function TimelineCard({ entry }: { entry: typeof ENTRIES[0] }) {
       <ul className="flex flex-col gap-2.5">
         {entry.bullets.map((b, i) => (
           <li key={i} className="flex gap-2 items-start text-slate-400 text-[0.87rem] leading-relaxed">
-            <span className="text-purple-400 mt-[2px] shrink-0 text-[0.9rem]">▹</span>
+            <span className="text-purple-400 mt-[2px] shrink-0 text-[0.9rem]">&#9657;</span>
             {b}
           </li>
         ))}
@@ -162,7 +166,7 @@ function TimelineCard({ entry }: { entry: typeof ENTRIES[0] }) {
         rel="noopener noreferrer"
         className="inline-flex items-center gap-1 mt-4 text-blue-400 text-[0.78rem] font-semibold hover:text-blue-300 transition-colors"
       >
-        {entry.link.replace('https://', '')} ↗
+        {entry.link.replace('https://', '')} &#8599;
       </a>
     </motion.div>
   )

@@ -77,7 +77,7 @@ export default function Ebook() {
               whileHover={{ scale: 1.04, y: -3 }}
               whileTap={{ scale: 0.97 }}
             >
-              ⬇ Download Free Ebook
+              Download Free Ebook
             </motion.a>
           </div>
         </motion.div>

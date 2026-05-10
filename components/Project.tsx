@@ -38,7 +38,7 @@ export default function Project() {
             {/* Text */}
             <div>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[0.72rem] font-bold uppercase tracking-widest border border-teal-500/30 bg-teal-500/10 text-teal-300 mb-4">
-                🤖 AI Research Tool
+                AI Research Tool
               </span>
               <h3 className="text-[1.9rem] font-black tracking-tight mb-1 leading-tight">
                 AI Publisher Finder Tool

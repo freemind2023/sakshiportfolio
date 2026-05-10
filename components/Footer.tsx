@@ -16,7 +16,7 @@ export default function Footer() {
         <span className="bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent font-bold">
           Sakshi G. Nivekar
         </span>
-        {' '}· Crafted with passion in Pune, Maharashtra 🇮🇳
+        {' '}· Crafted with passion in Pune, Maharashtra
       </motion.p>
     </footer>
   )
