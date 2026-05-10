@@ -96,7 +96,6 @@ export default function Experience() {
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true, amount: 0.5 }}
                       transition={{ type: 'spring', stiffness: 400, damping: 20, delay: 0.3 }}
-                      whileInView2={{ boxShadow: '0 0 16px rgba(124,58,237,0.7)' }}
                     />
                   </div>
 
