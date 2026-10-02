@@ -6,7 +6,7 @@ const ENTRIES = [
   {
     company: 'Free Mind Consultancy',
     link: 'https://freemindconsult.com',
-    role: 'Business Development & Operations Executive',
+    role: 'Digital Marketing Executive',
     period: 'June 2024 — Present',
     type: 'Full-time',
     color: 'purple',

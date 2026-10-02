@@ -79,7 +79,7 @@ export default function About() {
             </h2>
 
             <p className="text-slate-400 leading-relaxed mb-4 text-[0.97rem]">
-              I&apos;m a Business Development &amp; Operations Executive who thrives at the intersection
+              I&apos;m a Digital Marketing Executive who thrives at the intersection
               of creative marketing and data-driven strategy. At{' '}
               <span className="text-slate-200 font-semibold">Free Mind Consultancy</span>, I manage
               the full digital stack — Google Analytics 4, SEO, social media campaigns, Meta Business

@@ -9,12 +9,12 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Sakshi G. Nivekar — Business Development & Operations Executive',
+  title: 'Sakshi G. Nivekar — Digital Marketing Executive',
   description:
-    'Portfolio of Sakshi G. Nivekar — Business Development & Operations Executive, Creative Strategist, and Social Media Executive based in Pune, Maharashtra. Open to remote and freelance opportunities.',
+    'Portfolio of Sakshi G. Nivekar — Digital Marketing Executive, Creative Strategist, and Social Media Executive based in Pune, Maharashtra. Open to remote and freelance opportunities.',
   keywords: [
     'Sakshi Nivekar',
-    'Business Development',
+    'Digital Marketing',
     'Operations Executive',
     'Social Media Strategy',
     'Google Analytics',
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Sakshi G. Nivekar — Portfolio',
     description:
-      'Business Development & Operations Executive | Creative Strategist | Social Media Executive',
+      'Digital Marketing Executive | Creative Strategist | Social Media Executive',
     siteName: 'Sakshi G. Nivekar Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Sakshi G. Nivekar — Portfolio',
-    description: 'Business Development & Operations Executive based in Pune, Maharashtra.',
+    description: 'Digital Marketing Executive based in Pune, Maharashtra.',
   },
 }
 

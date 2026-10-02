@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useTyping } from '@/hooks/useTyping'
 
-const ROLES = ['Business Development Executive', 'Creative Strategist', 'Social Media Executive']
+const ROLES = ['Digital Marketing Executive', 'Creative Strategist', 'Social Media Executive']
 
 const COLORS = ['168,85,247', '99,102,241', '59,130,246', '20,184,166', '236,72,153']
 
@@ -177,17 +177,9 @@ export default function Hero() {
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex gap-3 justify-center flex-wrap mb-8">
-          <a
-            href="https://drive.google.com/file/d/1549aHlXP78uN1l2aWstew-DjCx7ZyyeU/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            Download Resume
-          </a>
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="btn-outline"
+            className="btn-primary"
           >
             Contact Me →
           </button>
