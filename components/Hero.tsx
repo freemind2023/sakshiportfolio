@@ -177,9 +177,17 @@ export default function Hero() {
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex gap-3 justify-center flex-wrap mb-8">
+          <a
+            href="https://drive.google.com/file/d/14cHZhQ-yf2hgvV5_jHepTttHYvHu7RDL/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            Download Resume
+          </a>
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="btn-primary"
+            className="btn-outline"
           >
             Contact Me →
           </button>

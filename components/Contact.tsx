@@ -37,6 +37,19 @@ const BUTTONS = [
       </svg>
     ),
   },
+  {
+    label: 'Download Resume',
+    href: 'https://drive.google.com/file/d/14cHZhQ-yf2hgvV5_jHepTttHYvHu7RDL/view?usp=sharing',
+    gradient: 'from-amber-500 to-red-500',
+    shadow: 'rgba(245,158,11,0.35)',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+    ),
+  },
 ]
 
 const EXTRAS = [

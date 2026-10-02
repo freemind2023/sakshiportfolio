@@ -89,6 +89,16 @@ export default function Navbar({ hasBanner = false }: { hasBanner?: boolean }) {
           })}
         </ul>
 
+        {/* CTA */}
+        <a
+          href="https://drive.google.com/file/d/14cHZhQ-yf2hgvV5_jHepTttHYvHu7RDL/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-purple-600 to-blue-500 text-white hover:opacity-90 transition-opacity"
+        >
+          Resume ↗
+        </a>
+
         {/* Hamburger */}
         <button
           className="md:hidden flex flex-col justify-center gap-[5px] w-8 h-8 p-1"
@@ -136,6 +146,17 @@ export default function Navbar({ hasBanner = false }: { hasBanner?: boolean }) {
                 {item.label}
               </motion.button>
             ))}
+            <div className="px-4 pb-2 pt-1">
+              <a
+                href="https://drive.google.com/file/d/14cHZhQ-yf2hgvV5_jHepTttHYvHu7RDL/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary w-full justify-center mt-2"
+                onClick={() => setMenuOpen(false)}
+              >
+                Download Resume
+              </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
